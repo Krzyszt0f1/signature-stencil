@@ -1,0 +1,23 @@
+svg {
+  width: 230px;
+  height: 193px;
+}
+
+#signature {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  /* This is to allow for covering the signature */
+  /* length found by using document.getDocumentById.getTotalLength */
+  stroke-dasharray: 919;
+  stroke-dashoffset: 919;
+  animation: sign 5s infinite ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+  /* 40% -> 2s of draw, 60% -> 3s of completed drawing */
+  40%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
